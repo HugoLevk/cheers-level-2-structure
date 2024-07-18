@@ -18,7 +18,7 @@ export class ListCocktailComponent implements OnInit {
 
   _cocktailsList : ICocktail[];
 
-  searchText : Signal<string>;
+  searchText : Signal<string> = signal("");
 
   filteredCocktailsSignal : Signal<ICocktail[]> ;
 
@@ -28,9 +28,11 @@ export class ListCocktailComponent implements OnInit {
 
   ngOnInit(): void {
     this._cocktailService.getCocktails().subscribe(
-      cocktails => this._cocktailsList = cocktails
+      cocktails => {
+        this._cocktailsList = cocktails;
+        console.table(this._cocktailsList);
+      }
     );
-    console.table(this._cocktailsList);
 
     this.filteredCocktailsSignal = computed(() => {
       console.log("searchText : ", this.searchText());
@@ -42,6 +44,6 @@ export class ListCocktailComponent implements OnInit {
       }
     });
 
-    this.searchText = signal("");
+
   }
 }

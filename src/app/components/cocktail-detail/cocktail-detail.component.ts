@@ -9,7 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   selector: 'app-cocktail-detail',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
-  providers: [ HttpClient, ActivatedRoute, Router ],
+  providers: [ HttpClient],
   templateUrl: './cocktail-detail.component.html',
   styleUrls: ['./cocktail-detail.component.scss']
 })

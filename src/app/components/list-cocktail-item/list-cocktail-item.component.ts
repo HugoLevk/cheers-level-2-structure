@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   selector: 'app-list-cocktail-item',
   standalone: true,
   imports: [CommonModule],
-  providers: [FavoriteService, Router],
   templateUrl: './list-cocktail-item.component.html',
   styleUrl: './list-cocktail-item.component.scss'
 })
