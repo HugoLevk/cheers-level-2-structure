@@ -1,0 +1,39 @@
+<div class="cocktail-detail" *ngIf="cocktail">
+  <button class="back-button" (click)="goBack()">
+    <span class="icon">⬅️</span>
+    Back
+  </button>
+
+  <div class="cocktail-info">
+    <img [src]="cocktail.imageUrl" alt="{{ cocktail.name }}" class="cocktail-image" />
+
+    <div class="cocktail-details">
+      <div class="headerName">
+        <h1>{{ cocktail.name }}</h1>
+        <span  aria-hidden="false"
+              [ngClass]="{'icon-star':true, 'active': cocktail.isFavorite}"
+              (click)="toggleFavorite()"
+              (keydown)="onKeyPress($event)"
+              [id]="'star-' + cocktail.id"></span>
+      </div>
+
+      <div class="type">
+        <span [class]="cocktail.isAlcoholic ? 'alcoholic' : 'non-alcoholic'">
+          {{ cocktail.isAlcoholic ? 'Alcoholic' : 'Non-Alcoholic' }}
+        </span>
+      </div>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+        <ul>
+          <li *ngFor="let ingredient of cocktail.ingredients">{{ ingredient }}</li>
+        </ul>
+      </div>
+
+      <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>{{ cocktail.instructions }}</p>
+      </div>
+    </div>
+  </div>
+</div>

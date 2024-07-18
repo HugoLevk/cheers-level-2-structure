@@ -1,0 +1,48 @@
+.cocktail-info {
+  display: flex;
+  align-items: center; /* Aligner les éléments verticalement au centre */
+  gap: 20px; /* Ajuster l'espacement entre l'image et les détails */
+  background-color: azure;
+  border-radius: 8px;
+}
+
+.back-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cocktail-image {
+  /* Assurez-vous que l'image ne soit pas trop grande */
+  max-width: 50%; /* ou une autre valeur appropriée */
+  max-height: 60vh;
+  height: auto;
+  margin: 5%;
+}
+
+.cocktail-details {
+  flex-grow: 1;
+  margin-left: 25px;
+}
+
+
+div.headerName{
+  display: flex;
+}
+
+span.icon-star{
+  margin-top: 18px;
+  width: 32px;
+  height: 32px;
+
+}
+
+.instructions {
+  margin-top: 20px;
+  max-width: 80%;
+}

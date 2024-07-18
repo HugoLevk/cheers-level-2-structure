@@ -1,0 +1,36 @@
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  flex-shrink: 1.5;
+  flex-grow: 3;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.listItem {
+  display: flex;
+
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  align-items: center;
+
+  width: 30%;
+  margin: 1.5%;
+
+}
+
+.filterContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

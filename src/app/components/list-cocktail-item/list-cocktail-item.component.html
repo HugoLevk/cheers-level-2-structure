@@ -1,0 +1,23 @@
+
+  <img [src]="cocktail.imageUrl" alt="{{ cocktail.name }}" class="cocktail-image"/>
+  <div class="cocktail-details">
+    <div class="listItemHeader">
+      <h3 class="listItemTitle" (click)="viewDetails()" (keydown)="onKeyPress($event)">{{ cocktail.name }}</h3>
+
+      <span  aria-hidden="false"
+
+          [ngClass]="{'icon-star':true, 'active': cocktail.isFavorite}"
+         (click)="toggleFavorite()"
+         (keydown)="onKeyPress($event)"
+         [id]="'star-' + cocktail.id"></span>
+
+    </div>
+    <div class="listItemType">
+      <span [class]="cocktail.isAlcoholic ? 'alcoholic' : 'non-alcoholic'">
+        {{ cocktail.isAlcoholic ? 'Alcoholic' : 'Non-Alcoholic' }}
+      </span>
+    </div>
+    <div class="listItemIngredients">
+      {{ cocktail.ingredients.join(' | ') }}
+    </div>
+  </div>

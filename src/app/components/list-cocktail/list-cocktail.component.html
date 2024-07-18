@@ -1,0 +1,6 @@
+<div class="filterContainer">
+  <input class="searchInput" type="text" placeholder="Search" [(ngModel)]="searchText"/>
+</div>
+<div class="listContainer">
+    <app-list-cocktail-item class="listItem" *ngFor="let cocktail of filteredCocktailsSignal() ?? _cocktailsList" [cocktail]="cocktail"></app-list-cocktail-item>
+</div>
